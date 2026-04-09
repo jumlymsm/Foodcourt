@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pizzaria – Crusting the Competition</title>
+  <link rel="stylesheet" href="../css/shop.css" />
+  <style>
+    :root {
+      --brand:    #c0392b;
+      --brand-dk: #96281b;
+      --accent:   #f5c518;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="top-bar">
+    <a class="back-btn" href="../index.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      All Shops
+    </a>
+    <div class="top-bar-fc-logo"><img src="../images/logos/food-court-logo.png" alt="International Food Court" /></div>
+    <div class="top-bar-divider"></div>
+    <img class="top-bar-shop-logo" src="../images/logos/pizzaria.png" alt="Pizzaria" />
+    <span class="top-bar-shop-name">Pizzaria</span>
+  </header>
+
+  <section class="shop-hero">
+    <img class="hero-logo" src="../images/logos/pizzaria.png" alt="Pizzaria" />
+    <p class="hero-tagline">Crusting the Competition — handmade pizza, fired fresh</p>
+  </section>
+
+  <nav class="tab-nav">
+    <button class="tab-btn active" data-tab="menu">Menu</button>
+    <button class="tab-btn" data-tab="gallery">Gallery</button>
+    <button class="tab-btn" data-tab="recipes">Recipes</button>
+  </nav>
+
+  <div class="shop-content">
+
+    <!-- MENU -->
+    <div class="tab-panel active" id="menu">
+
+      <div class="menu-category">
+        <h2 class="category-title">Classic Pizzas</h2>
+        <div class="menu-items">
+          <div class="menu-item">
+            <div class="item-info"><div class="item-name">Margherita</div><div class="item-desc">San Marzano tomato, fior di latte mozzarella, fresh basil</div></div>
+            <span class="item-price">$18</span>
+          </div>
+          <div class="menu-item">
+            <div class="item-info"><div class="item-name">Hawaiian</div><div class="item-desc">Ham, pineapple, mozzarella on a tomato base</div></div>
+            <span class="item-price">$19</span>
+          </div>
+          <div class="menu-item">
+            <div class="item-info"><div class="item-name">BBQ Chicken</div><div class="item-desc">BBQ base, grilled chicken, red onion, capsicum & cheese</div></div>
+            <span class="item-price">$21</span>
+          </div>
+          <div class="menu-item">
+            <div class="item-info"><div class="item-name">Pepperoni</div><div class="item-desc">Classic tomato base loaded with pepperoni & mozzarella</div></div>
+            <span class="item-price">$20</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-category">
+        <h2 class="category-title">Gourmet Pizzas</h2>
+        <div class="menu-items">
+          <div class="menu-item">
+            <div class="item-info"><div class="item-name">Truffle Mushroom</div><div class="item-desc">Truffle cream, mixed mushrooms, gruyère & fresh thyme</div></div>
+            <span class="item-price">$24</span>
+          </div>
+          <div class="menu-item">
+            <div class="item-info"><div class="item-name">Prawn & Avocado</div><div class="item-desc">Garlic cream, tiger prawns, avocado, rocket & lemon zest</div></div>
+            <span class="item-price">$25</span>
+          </div>
+          <div class="menu-item">
+            <div class="item-info"><div class="item-name">Lamb & Feta</div><div class="item-desc">Slow-roasted lamb, feta, olives, tomato & herbs on garlic base</div></div>
+            <span class="item-price">$23</span>
+          </div>
+          <div class="menu-item">
+            <div class="item-info"><div class="item-name">Spicy Nduja</div><div class="item-desc">Spreadable spicy pork salami, burrata, honey & basil</div></div>
+            <span class="item-price">$23</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-category">
+        <h2 class="category-title">Pasta</h2>
+        <div class="menu-items">
+          <div class="menu-item">
+            <div class="item-info"><div class="item-name">Spaghetti Carbonara</div><div class="item-desc">Pancetta, egg yolk, pecorino & black pepper</div></div>
+            <span class="item-price">$18</span>
+          </div>
+          <div class="menu-item">
+            <div class="item-info"><div class="item-name">Beef Bolognese</div><div class="item-desc">Slow-cooked beef ragù with pappardelle & parmesan</div></div>
+            <span class="item-price">$18</span>
+          </div>
+          <div class="menu-item">
+            <div class="item-info"><div class="item-name">Pesto Chicken Penne</div><div class="item-desc">Grilled chicken, basil pesto, cherry tomatoes & pine nuts</div></div>
+            <span class="item-price">$19</span>
+          </div>
+          <div class="menu-item">
+            <div class="item-info"><div class="item-name">Arrabbiata</div><div class="item-desc">Spicy tomato sauce with garlic, chilli & parsley</div></div>
+            <span class="item-price">$15</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-category">
+        <h2 class="category-title">Sides & Drinks</h2>
+        <div class="menu-items">
+          <div class="menu-item">
+            <div class="item-info"><div class="item-name">Garlic Bread</div><div class="item-desc">Toasted sourdough with house garlic butter</div></div>
+            <span class="item-price">$6</span>
+          </div>
+          <div class="menu-item">
+            <div class="item-info"><div class="item-name">Cheesy Garlic Bread</div><div class="item-desc">Garlic bread topped with melted mozzarella & herbs</div></div>
+            <span class="item-price">$8</span>
+          </div>
+          <div class="menu-item">
+            <div class="item-info"><div class="item-name">Italian Soda</div><div class="item-desc">San Pellegrino — Blood Orange, Lemon or Pomegranate</div></div>
+            <span class="item-price">$4</span>
+          </div>
+          <div class="menu-item">
+            <div class="item-info"><div class="item-name">Tiramisu</div><div class="item-desc">Classic Italian dessert with mascarpone & espresso</div></div>
+            <span class="item-price">$8</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- GALLERY -->
+    <div class="tab-panel" id="gallery">
+      <div class="gallery-grid">
+        <div class="gallery-item"><div class="gallery-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>Margherita</div></div>
+        <div class="gallery-item"><div class="gallery-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>Truffle Mushroom</div></div>
+        <div class="gallery-item"><div class="gallery-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>BBQ Chicken Pizza</div></div>
+        <div class="gallery-item"><div class="gallery-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>Beef Bolognese</div></div>
+        <div class="gallery-item"><div class="gallery-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>Garlic Bread</div></div>
+        <div class="gallery-item"><div class="gallery-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>Tiramisu</div></div>
+      </div>
+    </div>
+
+    <!-- RECIPES -->
+    <div class="tab-panel" id="recipes">
+
+      <div class="recipe-card">
+        <div class="recipe-title">Classic Pizza Dough</div>
+        <div class="recipe-meta"><span>Makes: 2 pizzas</span><span>Prep: 15 min + 1 hr rise</span><span>Cook: 12 min</span></div>
+        <div class="recipe-body">
+          <div>
+            <div class="recipe-section-title">Ingredients</div>
+            <ul class="ingredients-list">
+              <li>3 cups bread flour (00 flour)</li>
+              <li>7g instant yeast</li>
+              <li>1 tsp sugar</li>
+              <li>1 tsp salt</li>
+              <li>2 tbsp olive oil</li>
+              <li>200ml warm water</li>
+              <li>Extra flour for kneading</li>
+            </ul>
+          </div>
+          <div>
+            <div class="recipe-section-title">Method</div>
+            <ol class="steps-list">
+              <li>Mix yeast, sugar and warm water in a bowl. Rest 5 minutes until frothy.</li>
+              <li>Add flour, salt and olive oil. Mix until a rough dough forms.</li>
+              <li>Knead on a floured surface for 10 minutes until smooth and elastic.</li>
+              <li>Place in an oiled bowl, cover and rise for 1 hour until doubled.</li>
+              <li>Divide in two, stretch each into a thin round base on a floured surface.</li>
+              <li>Top with sauce and toppings. Bake at 240°C for 10–12 minutes until golden.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+      <div class="recipe-card">
+        <div class="recipe-title">San Marzano Tomato Sauce</div>
+        <div class="recipe-meta"><span>Makes: enough for 4 pizzas</span><span>Prep: 5 min</span><span>Cook: 20 min</span></div>
+        <div class="recipe-body">
+          <div>
+            <div class="recipe-section-title">Ingredients</div>
+            <ul class="ingredients-list">
+              <li>400g San Marzano canned tomatoes</li>
+              <li>3 cloves garlic, minced</li>
+              <li>2 tbsp olive oil</li>
+              <li>1 tsp dried oregano</li>
+              <li>½ tsp sugar</li>
+              <li>Salt & pepper</li>
+              <li>Fresh basil leaves</li>
+            </ul>
+          </div>
+          <div>
+            <div class="recipe-section-title">Method</div>
+            <ol class="steps-list">
+              <li>Heat olive oil in a saucepan over medium heat. Add garlic, cook 1 minute.</li>
+              <li>Add canned tomatoes, crushing them by hand as you add them.</li>
+              <li>Add oregano, sugar, salt and pepper. Stir to combine.</li>
+              <li>Simmer uncovered for 20 minutes, stirring occasionally, until slightly thickened.</li>
+              <li>Taste and adjust seasoning. Stir through fresh basil at the end.</li>
+              <li>Cool before spreading on pizza bases. Store refrigerated up to 5 days.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <p>International Food Court &mdash; Taste the World. Love NZ.</p>
+  </footer>
+
+  <script src="../js/shop.js"></script>
+</body>
+</html>

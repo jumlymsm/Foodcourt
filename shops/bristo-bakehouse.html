@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bristo Bakehouse – Coffee &amp; Bakery</title>
+  <link rel="stylesheet" href="../css/shop.css" />
+  <style>
+    :root {
+      --brand:    #5c3317;
+      --brand-dk: #3e2210;
+      --accent:   #c8a951;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="top-bar">
+    <a class="back-btn" href="../index.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      All Shops
+    </a>
+    <div class="top-bar-fc-logo"><img src="../images/logos/food-court-logo.png" alt="International Food Court" /></div>
+    <div class="top-bar-divider"></div>
+    <img class="top-bar-shop-logo" src="../images/logos/bristo-bakehouse.png" alt="Bristo Bakehouse" />
+    <span class="top-bar-shop-name">Bristo Bakehouse</span>
+  </header>
+
+  <section class="shop-hero">
+    <img class="hero-logo" src="../images/logos/bristo-bakehouse.png" alt="Bristo Bakehouse" />
+    <p class="hero-tagline">Artisan coffee &amp; fresh-baked goodness every morning</p>
+  </section>
+
+  <nav class="tab-nav">
+    <button class="tab-btn active" data-tab="menu">Menu</button>
+    <button class="tab-btn" data-tab="gallery">Gallery</button>
+    <button class="tab-btn" data-tab="recipes">Recipes</button>
+  </nav>
+
+  <div class="shop-content">
+
+    <!-- MENU -->
+    <div class="tab-panel active" id="menu">
+
+      <div class="menu-category">
+        <h2 class="category-title">Coffee</h2>
+        <div class="menu-items">
+          <div class="menu-item">
+            <div class="item-info"><div class="item-name">Flat White</div><div class="item-desc">Double espresso with silky steamed milk — the Kiwi classic</div></div>
+            <span class="item-price">$5</span>
+          </div>
+          <div class="menu-item">
+            <div class="item-info"><div class="item-name">Long Black</div><div class="item-desc">Double espresso over hot water, bold & clean</div></div>
+            <span class="item-price">$4.50</span>
+          </div>
+          <div class="menu-item">
+            <div class="item-info"><div class="item-name">Cappuccino</div><div class="item-desc">Espresso, steamed milk & thick froth with a dusting of cocoa</div></div>
+            <span class="item-price">$5</span>
+          </div>
+          <div class="menu-item">
+            <div class="item-info"><div class="item-name">Latte</div><div class="item-desc">Smooth espresso with velvety steamed milk</div></div>
+            <span class="item-price">$5.50</span>
+          </div>
+          <div class="menu-item">
+            <div class="item-info"><div class="item-name">Mocha</div><div class="item-desc">Espresso, chocolate sauce & steamed milk</div></div>
+            <span class="item-price">$5.50</span>
+          </div>
+          <div class="menu-item">
+            <div class="item-info"><div class="item-name">Cold Brew</div><div class="item-desc">Slow-steeped 18-hour cold brew, served over ice</div></div>
+            <span class="item-price">$6</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-category">
+        <h2 class="category-title">Pastries & Baked Goods</h2>
+        <div class="menu-items">
+          <div class="menu-item">
+            <div class="item-info"><div class="item-name">Butter Croissant</div><div class="item-desc">Flaky, golden French-style croissant baked fresh daily</div></div>
+            <span class="item-price">$4.50</span>
+          </div>
+          <div class="menu-item">
+            <div class="item-info"><div class="item-name">Almond Croissant</div><div class="item-desc">Croissant filled with frangipane, topped with flaked almonds</div></div>
+            <span class="item-price">$5.50</span>
+          </div>
+          <div class="menu-item">
+            <div class="item-info"><div class="item-name">Blueberry Muffin</div><div class="item-desc">Moist muffin bursting with fresh blueberries</div></div>
+            <span class="item-price">$4</span>
+          </div>
+          <div class="menu-item">
+            <div class="item-info"><div class="item-name">Cheese & Vegemite Scroll</div><div class="item-desc">Soft dough scrolls with cheddar & Vegemite filling</div></div>
+            <span class="item-price">$4.50</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-category">
+        <h2 class="category-title">Sandwiches & Toasties</h2>
+        <div class="menu-items">
+          <div class="menu-item">
+            <div class="item-info"><div class="item-name">BLT</div><div class="item-desc">Bacon, lettuce, tomato & aioli on sourdough</div></div>
+            <span class="item-price">$11</span>
+          </div>
+          <div class="menu-item">
+            <div class="item-info"><div class="item-name">Chicken Club</div><div class="item-desc">Grilled chicken, avocado, bacon, lettuce & mayo on Turkish</div></div>
+            <span class="item-price">$13</span>
+          </div>
+          <div class="menu-item">
+            <div class="item-info"><div class="item-name">Egg & Cheese Toastie</div><div class="item-desc">Free-range egg, cheddar & relish in toasted sourdough</div></div>
+            <span class="item-price">$9</span>
+          </div>
+          <div class="menu-item">
+            <div class="item-info"><div class="item-name">Falafel Wrap</div><div class="item-desc">Crispy falafel, hummus, tabbouleh & tahini in a flatbread</div></div>
+            <span class="item-price">$12</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-category">
+        <h2 class="category-title">Cakes & Slices</h2>
+        <div class="menu-items">
+          <div class="menu-item">
+            <div class="item-info"><div class="item-name">Carrot Cake</div><div class="item-desc">Spiced carrot cake with cream cheese frosting</div></div>
+            <span class="item-price">$6</span>
+          </div>
+          <div class="menu-item">
+            <div class="item-info"><div class="item-name">Chocolate Brownie</div><div class="item-desc">Fudgy dark chocolate brownie with sea salt</div></div>
+            <span class="item-price">$5</span>
+          </div>
+          <div class="menu-item">
+            <div class="item-info"><div class="item-name">Baked Cheesecake</div><div class="item-desc">Classic New York style cheesecake with berry compote</div></div>
+            <span class="item-price">$7</span>
+          </div>
+          <div class="menu-item">
+            <div class="item-info"><div class="item-name">Anzac Biscuit</div><div class="item-desc">Traditional oat & golden syrup biscuit, crispy & chewy</div></div>
+            <span class="item-price">$2.50</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- GALLERY -->
+    <div class="tab-panel" id="gallery">
+      <div class="gallery-grid">
+        <div class="gallery-item"><div class="gallery-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>Flat White</div></div>
+        <div class="gallery-item"><div class="gallery-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>Butter Croissant</div></div>
+        <div class="gallery-item"><div class="gallery-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>Chicken Club</div></div>
+        <div class="gallery-item"><div class="gallery-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>Carrot Cake</div></div>
+        <div class="gallery-item"><div class="gallery-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>Almond Croissant</div></div>
+        <div class="gallery-item"><div class="gallery-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>Chocolate Brownie</div></div>
+      </div>
+    </div>
+
+    <!-- RECIPES -->
+    <div class="tab-panel" id="recipes">
+
+      <div class="recipe-card">
+        <div class="recipe-title">Classic Butter Croissants</div>
+        <div class="recipe-meta"><span>Makes: 8</span><span>Prep: 3 hrs</span><span>Bake: 20 min</span></div>
+        <div class="recipe-body">
+          <div>
+            <div class="recipe-section-title">Ingredients</div>
+            <ul class="ingredients-list">
+              <li>3 cups bread flour</li>
+              <li>7g instant yeast</li>
+              <li>50g sugar</li>
+              <li>1 tsp salt</li>
+              <li>200ml warm milk</li>
+              <li>30g softened butter</li>
+              <li>200g cold unsalted butter (for lamination)</li>
+              <li>1 egg + 1 tbsp milk (egg wash)</li>
+            </ul>
+          </div>
+          <div>
+            <div class="recipe-section-title">Method</div>
+            <ol class="steps-list">
+              <li>Mix flour, yeast, sugar, salt, warm milk and softened butter to form dough. Knead 5 minutes. Refrigerate 1 hour.</li>
+              <li>Beat cold butter into a flat square between baking paper. Refrigerate until firm but pliable.</li>
+              <li>Roll dough into a rectangle. Place butter square in centre, fold dough over it like an envelope.</li>
+              <li>Roll out and fold into thirds (like a letter). Repeat 3 times, refrigerating 30 minutes between each fold.</li>
+              <li>Roll dough thin, cut into triangles. Roll each triangle from base to tip.</li>
+              <li>Place on baking paper, brush with egg wash. Prove 1 hour. Bake at 200°C for 18–20 minutes until golden.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+      <div class="recipe-card">
+        <div class="recipe-title">Fudgy Chocolate Brownies</div>
+        <div class="recipe-meta"><span>Makes: 16 squares</span><span>Prep: 15 min</span><span>Bake: 25 min</span></div>
+        <div class="recipe-body">
+          <div>
+            <div class="recipe-section-title">Ingredients</div>
+            <ul class="ingredients-list">
+              <li>200g dark chocolate (70%)</li>
+              <li>150g unsalted butter</li>
+              <li>250g caster sugar</li>
+              <li>3 eggs</li>
+              <li>1 tsp vanilla extract</li>
+              <li>100g plain flour</li>
+              <li>30g cocoa powder</li>
+              <li>½ tsp salt</li>
+              <li>Flaky sea salt to top</li>
+            </ul>
+          </div>
+          <div>
+            <div class="recipe-section-title">Method</div>
+            <ol class="steps-list">
+              <li>Preheat oven to 175°C. Line a 20cm square tin with baking paper.</li>
+              <li>Melt chocolate and butter together in a bowl over simmering water. Cool 5 minutes.</li>
+              <li>Whisk sugar into chocolate mixture, then beat in eggs one at a time. Add vanilla.</li>
+              <li>Fold in flour, cocoa and salt until just combined — do not overmix.</li>
+              <li>Pour into tin, sprinkle with flaky salt. Bake 22–25 minutes. Centre should still have a slight wobble.</li>
+              <li>Cool completely in tin before cutting. This is key — patience makes them fudgy!</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <p>International Food Court &mdash; Taste the World. Love NZ.</p>
+  </footer>
+
+  <script src="../js/shop.js"></script>
+</body>
+</html>
