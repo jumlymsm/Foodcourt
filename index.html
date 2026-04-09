@@ -231,106 +231,74 @@
     </section>
 
     <!-- ── GOOGLE REVIEWS ── -->
-    <section id="reviews" class="section reviews-section">
-      <div class="section-header">
-        <div class="section-eyebrow">What People Say</div>
-        <h2 class="section-title">Google Reviews</h2>
-        <div class="reviews-summary">
-          <div class="reviews-score">4.7</div>
-          <div class="reviews-stars-big">
-            <svg viewBox="0 0 20 20" fill="#fbbc04"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
-            <svg viewBox="0 0 20 20" fill="#fbbc04"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
-            <svg viewBox="0 0 20 20" fill="#fbbc04"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
-            <svg viewBox="0 0 20 20" fill="#fbbc04"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
-            <svg viewBox="0 0 20 20" fill="#fbbc04" style="clip-path:inset(0 30% 0 0)"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+    <section id="reviews" class="reviews-section-wrap">
+      <div class="reviews-inner">
+
+        <!-- Top row: heading + button -->
+        <div class="reviews-top-row">
+          <div>
+            <h2 class="reviews-heading">Google Reviews</h2>
+            <div class="reviews-meta">
+              <span class="reviews-score">4.8</span>
+              <span class="reviews-stars">★★★★★</span>
+              <span class="reviews-count">(324 reviews)</span>
+            </div>
           </div>
-          <div class="reviews-count">Based on 120+ Google reviews</div>
+          <a href="https://g.page/r/review" target="_blank" rel="noopener" class="leave-review-btn">Leave a Review</a>
         </div>
-      </div>
 
-      <div class="reviews-track-wrapper">
-        <div class="reviews-track" id="reviewsTrack">
+        <!-- Cards grid -->
+        <div class="reviews-grid">
 
           <div class="review-card">
-            <div class="review-header">
-              <div class="review-avatar" style="background:#4285f4">S</div>
-              <div>
-                <div class="review-author">Sarah M.</div>
-                <div class="review-date">2 weeks ago</div>
+            <div class="review-card-top">
+              <div class="review-avatar">S</div>
+              <div class="review-person">
+                <div class="review-author">Sarah Jenkins</div>
+                <div class="review-date">1 week ago</div>
               </div>
-              <svg class="google-g" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
             </div>
-            <div class="review-stars">★★★★★</div>
-            <p class="review-text">"Absolutely love this place! The variety is incredible — we go to Mama Makan every week. The food is authentic and the atmosphere is always buzzing. Highly recommend for families."</p>
+            <div class="review-stars-row">★★★★★</div>
+            <p class="review-text">"Absolutely stunning food court! The variety is incredible. We tried the Sri Lankan kottu from Ceylon Bites and the Dan Dan noodles from Kung Food. Both were 10/10. Great vibe too."</p>
           </div>
 
           <div class="review-card">
-            <div class="review-header">
-              <div class="review-avatar" style="background:#34a853">J</div>
-              <div>
-                <div class="review-author">James T.</div>
-                <div class="review-date">1 month ago</div>
-              </div>
-              <svg class="google-g" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
-            </div>
-            <div class="review-stars">★★★★★</div>
-            <p class="review-text">"Bristo Bakehouse makes the best flat white in Hamilton, full stop. I stop in every morning before work. The croissants are fresh and buttery every single time."</p>
-          </div>
-
-          <div class="review-card">
-            <div class="review-header">
-              <div class="review-avatar" style="background:#ea4335">P</div>
-              <div>
-                <div class="review-author">Priya K.</div>
+            <div class="review-card-top">
+              <div class="review-avatar">D</div>
+              <div class="review-person">
+                <div class="review-author">David T.</div>
                 <div class="review-date">3 weeks ago</div>
               </div>
-              <svg class="google-g" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
             </div>
-            <div class="review-stars">★★★★★</div>
-            <p class="review-text">"Ceylon Bites is a gem! The kottu roti is as good as anything I've had back home. So happy to have authentic Sri Lankan food in Hamilton. The staff are warm and welcoming."</p>
+            <div class="review-stars-row">★★★★★</div>
+            <p class="review-text">"Finally a proper premium food hall in Hamilton CBD. The pizzas at Pizzaria are legitimately some of the best I've had in NZ. Love the warm lighting and seating layout."</p>
           </div>
 
           <div class="review-card">
-            <div class="review-header">
-              <div class="review-avatar" style="background:#fbbc04;color:#333">L</div>
-              <div>
-                <div class="review-author">Linda W.</div>
+            <div class="review-card-top">
+              <div class="review-avatar">E</div>
+              <div class="review-person">
+                <div class="review-author">Emily Chen</div>
                 <div class="review-date">1 month ago</div>
               </div>
-              <svg class="google-g" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
             </div>
-            <div class="review-stars">★★★★☆</div>
-            <p class="review-text">"Great food court with a really diverse range of food. We brought the whole extended family and everyone found something they loved. Kung Food's dumplings are a must-try."</p>
+            <div class="review-stars-row">★★★★★</div>
+            <p class="review-text">"My go-to lunch spot. Bristo Bakehouse has amazing coffee and pastries, and Try India's lunch specials are incredible value. Always clean and bustling."</p>
           </div>
 
           <div class="review-card">
-            <div class="review-header">
-              <div class="review-avatar" style="background:#9c27b0">R</div>
-              <div>
-                <div class="review-author">Ravi N.</div>
+            <div class="review-card-top">
+              <div class="review-avatar">M</div>
+              <div class="review-person">
+                <div class="review-author">Marcus R.</div>
                 <div class="review-date">2 months ago</div>
               </div>
-              <svg class="google-g" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
             </div>
-            <div class="review-stars">★★★★★</div>
-            <p class="review-text">"Best food court in Waikato by far. The quality of food across all stalls is consistently high. Clean, well-managed and the staff everywhere are friendly. Already planning our next visit!"</p>
+            <div class="review-stars-row">★★★★☆</div>
+            <p class="review-text">"The Crispy Corner chicken is unbelievable. Finished it off with a sundae from Fizz &amp; Folly. Highly recommend this place for a group dinner since everyone can get what they want."</p>
           </div>
 
         </div>
-
-        <button class="reviews-nav prev" id="revPrev">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
-        </button>
-        <button class="reviews-nav next" id="revNext">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
-        </button>
-      </div>
-
-      <div class="reviews-cta-row">
-        <a href="https://g.page/r/review" target="_blank" rel="noopener" class="reviews-cta-btn">
-          <svg viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
-          Write a Google Review
-        </a>
       </div>
     </section>
 
@@ -472,21 +440,6 @@
 
     function resetAuto() { clearInterval(autoTimer); autoTimer = setInterval(() => goTo(current + 1), 5500); }
     resetAuto();
-
-    // ── Reviews Slider ──
-    const revTrack = document.getElementById('reviewsTrack');
-    let revOffset = 0;
-    const cardW = () => revTrack.querySelector('.review-card').offsetWidth + 20;
-    const maxOffset = () => revTrack.scrollWidth - revTrack.parentElement.clientWidth + 80;
-
-    document.getElementById('revNext').addEventListener('click', () => {
-      revOffset = Math.min(revOffset + cardW(), maxOffset());
-      revTrack.style.transform = `translateX(-${revOffset}px)`;
-    });
-    document.getElementById('revPrev').addEventListener('click', () => {
-      revOffset = Math.max(revOffset - cardW(), 0);
-      revTrack.style.transform = `translateX(-${revOffset}px)`;
-    });
 
     // ── Smooth scroll for nav links ──
     document.querySelectorAll('a[href^="#"]').forEach(a => {
