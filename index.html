@@ -3,148 +3,400 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>International Food Court</title>
+  <title>International Food Court — Taste the World. Love NZ.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
 
-  <header class="site-header">
+  <!-- ── STICKY NAV ── -->
+  <header class="site-header" id="top">
     <div class="header-logo">
-      <img src="images/logos/food-court-logo.jpeg" alt="International Food Court" />
+      <img src="images/logos/food-court-logo.jpeg" alt="International Food Court"
+           onerror="this.style.display='none'">
     </div>
     <div class="header-text">
       <div class="header-title">International Food Court</div>
       <div class="header-tagline">Taste the World &nbsp;·&nbsp; Love NZ</div>
     </div>
+    <nav class="header-nav">
+      <a href="#restaurants">Restaurants</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#directions">Directions</a>
+    </nav>
   </header>
 
+  <!-- ── HERO SLIDER ── -->
+  <section class="hero-slider" id="hero">
+    <div class="slides-track" id="slidesTrack">
+
+      <div class="slide slide-1">
+        <div class="slide-bg"></div>
+        <div class="slide-content">
+          <p class="slide-eyebrow">Hamilton, New Zealand</p>
+          <h1 class="slide-title">Where Every<br><em>Meal Is a Journey</em></h1>
+          <p class="slide-sub">8 world cuisines under one roof — from Sri Lanka to Malaysia, China to India and beyond.</p>
+          <a href="#restaurants" class="slide-cta">Explore Restaurants</a>
+        </div>
+      </div>
+
+      <div class="slide slide-2">
+        <div class="slide-bg"></div>
+        <div class="slide-content">
+          <p class="slide-eyebrow">Freshly Made Daily</p>
+          <h1 class="slide-title">Authentic Flavours,<br><em>Crafted with Love</em></h1>
+          <p class="slide-sub">Our chefs bring generations of tradition to every dish, every single day.</p>
+          <a href="#restaurants" class="slide-cta">See Our Menus</a>
+        </div>
+      </div>
+
+      <div class="slide slide-3">
+        <div class="slide-bg"></div>
+        <div class="slide-content">
+          <p class="slide-eyebrow">Open 7 Days</p>
+          <h1 class="slide-title">Good Food,<br><em>Great Company</em></h1>
+          <p class="slide-sub">The perfect spot for lunch, a quick bite, or a full family feast. Come as you are.</p>
+          <a href="#directions" class="slide-cta">Find Us</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Slider Controls -->
+    <button class="slider-btn prev" id="prevBtn" aria-label="Previous">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+    <button class="slider-btn next" id="nextBtn" aria-label="Next">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+    </button>
+
+    <!-- Dots -->
+    <div class="slider-dots" id="sliderDots">
+      <button class="dot active" data-index="0"></button>
+      <button class="dot" data-index="1"></button>
+      <button class="dot" data-index="2"></button>
+    </div>
+
+    <!-- Scroll hint -->
+    <div class="hero-scroll-hint">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+    </div>
+  </section>
+
+  <!-- ── INFO BAR ── -->
+  <div class="info-bar">
+    <div class="info-bar-inner">
+      <div class="info-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <div>
+          <div class="info-label">Opening Hours</div>
+          <div class="info-value">Mon – Sun &nbsp;·&nbsp; 10:00 AM – 9:00 PM</div>
+        </div>
+      </div>
+      <div class="info-divider"></div>
+      <div class="info-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <div>
+          <div class="info-label">Location</div>
+          <div class="info-value">Hamilton CBD, New Zealand</div>
+        </div>
+      </div>
+      <div class="info-divider"></div>
+      <div class="info-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        <div>
+          <div class="info-label">Phone</div>
+          <div class="info-value">+64 7 000 0000</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── MAIN CONTENT ── -->
   <main class="main-content">
 
-    <div class="section-label">
-      <h2>Our Restaurants</h2>
-      <div class="section-label-line"></div>
-    </div>
+    <!-- Restaurants -->
+    <section id="restaurants" class="section">
+      <div class="section-header">
+        <div class="section-eyebrow">Dine With Us</div>
+        <h2 class="section-title">Our Restaurants</h2>
+        <p class="section-sub">Choose from eight unique kitchens, each with their own story and flavour.</p>
+      </div>
 
-    <div class="shop-grid">
+      <div class="shop-grid">
 
-      <a class="shop-card" href="shops/bristo-bakehouse.html">
-        <div class="shop-card-logo">
-          <img src="images/logos/bristo-bakehouse.jpeg" alt=""
-               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-          <span class="logo-fallback">B</span>
-        </div>
-        <div class="shop-card-overlay"></div>
-        <div class="shop-card-info">
-          <div class="shop-name">Bristo Bakehouse</div>
-          <div class="shop-cuisine">Coffee &amp; Bakery</div>
-        </div>
-      </a>
+        <a class="shop-card" href="shops/bristo-bakehouse.html">
+          <div class="shop-card-logo">
+            <img src="images/logos/bristo-bakehouse.jpeg" alt=""
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <span class="logo-fallback">B</span>
+          </div>
+          <div class="shop-card-info">
+            <div class="shop-name">Bristo Bakehouse</div>
+            <div class="shop-cuisine">Coffee &amp; Bakery</div>
+          </div>
+        </a>
 
-      <a class="shop-card" href="shops/mama-makan.html">
-        <div class="shop-card-logo">
-          <img src="images/logos/mama-makan.jpeg" alt=""
-               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-          <span class="logo-fallback">M</span>
-        </div>
-        <div class="shop-card-overlay"></div>
-        <div class="shop-card-info">
-          <div class="shop-name">Mama Makan</div>
-          <div class="shop-cuisine">Malaysian Kitchen</div>
-        </div>
-      </a>
+        <a class="shop-card" href="shops/mama-makan.html">
+          <div class="shop-card-logo">
+            <img src="images/logos/mama-makan.jpeg" alt=""
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <span class="logo-fallback">M</span>
+          </div>
+          <div class="shop-card-info">
+            <div class="shop-name">Mama Makan</div>
+            <div class="shop-cuisine">Malaysian Kitchen</div>
+          </div>
+        </a>
 
-      <a class="shop-card" href="shops/kung-food.html">
-        <div class="shop-card-logo">
-          <img src="images/logos/kung-food.jpeg" alt=""
-               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-          <span class="logo-fallback">K</span>
-        </div>
-        <div class="shop-card-overlay"></div>
-        <div class="shop-card-info">
-          <div class="shop-name">Kung Food</div>
-          <div class="shop-cuisine">Chinese &amp; Asian Fusion</div>
-        </div>
-      </a>
+        <a class="shop-card" href="shops/kung-food.html">
+          <div class="shop-card-logo">
+            <img src="images/logos/kung-food.jpeg" alt=""
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <span class="logo-fallback">K</span>
+          </div>
+          <div class="shop-card-info">
+            <div class="shop-name">Kung Food</div>
+            <div class="shop-cuisine">Chinese &amp; Asian Fusion</div>
+          </div>
+        </a>
 
-      <a class="shop-card" href="shops/ceylon-bites.html">
-        <div class="shop-card-logo">
-          <img src="images/logos/ceylon-bites.jpeg" alt=""
-               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-          <span class="logo-fallback">C</span>
-        </div>
-        <div class="shop-card-overlay"></div>
-        <div class="shop-card-info">
-          <div class="shop-name">Ceylon Bites</div>
-          <div class="shop-cuisine">Sri Lankan</div>
-        </div>
-      </a>
+        <a class="shop-card" href="shops/ceylon-bites.html">
+          <div class="shop-card-logo">
+            <img src="images/logos/ceylon-bites.jpeg" alt=""
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <span class="logo-fallback">C</span>
+          </div>
+          <div class="shop-card-info">
+            <div class="shop-name">Ceylon Bites</div>
+            <div class="shop-cuisine">Sri Lankan</div>
+          </div>
+        </a>
 
-      <a class="shop-card coming-soon" href="#">
-        <span class="coming-tag">Coming Soon</span>
-        <div class="shop-card-logo">
-          <img src="images/logos/try-india.jpeg" alt=""
-               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-          <span class="logo-fallback">T</span>
-        </div>
-        <div class="shop-card-overlay"></div>
-        <div class="shop-card-info">
-          <div class="shop-name">Try India</div>
-          <div class="shop-cuisine">Spices &amp; Surprises</div>
-        </div>
-      </a>
+        <a class="shop-card coming-soon" href="#">
+          <span class="coming-tag">Coming Soon</span>
+          <div class="shop-card-logo">
+            <img src="images/logos/try-india.jpeg" alt=""
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <span class="logo-fallback">T</span>
+          </div>
+          <div class="shop-card-info">
+            <div class="shop-name">Try India</div>
+            <div class="shop-cuisine">Spices &amp; Surprises</div>
+          </div>
+        </a>
 
-      <a class="shop-card coming-soon" href="#">
-        <span class="coming-tag">Coming Soon</span>
-        <div class="shop-card-logo">
-          <img src="images/logos/crispy-corner.jpeg" alt=""
-               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-          <span class="logo-fallback">C</span>
-        </div>
-        <div class="shop-card-overlay"></div>
-        <div class="shop-card-info">
-          <div class="shop-name">Crispy Corner</div>
-          <div class="shop-cuisine">Built for the Crunch</div>
-        </div>
-      </a>
+        <a class="shop-card coming-soon" href="#">
+          <span class="coming-tag">Coming Soon</span>
+          <div class="shop-card-logo">
+            <img src="images/logos/crispy-corner.jpeg" alt=""
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <span class="logo-fallback">C</span>
+          </div>
+          <div class="shop-card-info">
+            <div class="shop-name">Crispy Corner</div>
+            <div class="shop-cuisine">Built for the Crunch</div>
+          </div>
+        </a>
 
-      <a class="shop-card coming-soon" href="#">
-        <span class="coming-tag">Coming Soon</span>
-        <div class="shop-card-logo">
-          <img src="images/logos/pizzaria.jpeg" alt=""
-               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-          <span class="logo-fallback">P</span>
-        </div>
-        <div class="shop-card-overlay"></div>
-        <div class="shop-card-info">
-          <div class="shop-name">Pizzaria</div>
-          <div class="shop-cuisine">Crusting the Competition</div>
-        </div>
-      </a>
+        <a class="shop-card coming-soon" href="#">
+          <span class="coming-tag">Coming Soon</span>
+          <div class="shop-card-logo">
+            <img src="images/logos/pizzaria.jpeg" alt=""
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <span class="logo-fallback">P</span>
+          </div>
+          <div class="shop-card-info">
+            <div class="shop-name">Pizzaria</div>
+            <div class="shop-cuisine">Crusting the Competition</div>
+          </div>
+        </a>
 
-      <a class="shop-card coming-soon" href="#">
-        <span class="coming-tag">Coming Soon</span>
-        <div class="shop-card-logo">
-          <img src="images/logos/fizz-folly.jpeg" alt=""
-               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-          <span class="logo-fallback">F</span>
-        </div>
-        <div class="shop-card-overlay"></div>
-        <div class="shop-card-info">
-          <div class="shop-name">Fizz &amp; Folly</div>
-          <div class="shop-cuisine">Ice Cream &amp; Juice</div>
-        </div>
-      </a>
+        <a class="shop-card coming-soon" href="#">
+          <span class="coming-tag">Coming Soon</span>
+          <div class="shop-card-logo">
+            <img src="images/logos/fizz-folly.jpeg" alt=""
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <span class="logo-fallback">F</span>
+          </div>
+          <div class="shop-card-info">
+            <div class="shop-name">Fizz &amp; Folly</div>
+            <div class="shop-cuisine">Ice Cream &amp; Juice</div>
+          </div>
+        </a>
 
-    </div>
+      </div>
+    </section>
+
+    <!-- ── GOOGLE REVIEWS ── -->
+    <section id="reviews" class="section reviews-section">
+      <div class="section-header">
+        <div class="section-eyebrow">What People Say</div>
+        <h2 class="section-title">Google Reviews</h2>
+        <div class="reviews-summary">
+          <div class="reviews-score">4.7</div>
+          <div class="reviews-stars-big">
+            <svg viewBox="0 0 20 20" fill="#fbbc04"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+            <svg viewBox="0 0 20 20" fill="#fbbc04"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+            <svg viewBox="0 0 20 20" fill="#fbbc04"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+            <svg viewBox="0 0 20 20" fill="#fbbc04"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+            <svg viewBox="0 0 20 20" fill="#fbbc04" style="clip-path:inset(0 30% 0 0)"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+          </div>
+          <div class="reviews-count">Based on 120+ Google reviews</div>
+        </div>
+      </div>
+
+      <div class="reviews-track-wrapper">
+        <div class="reviews-track" id="reviewsTrack">
+
+          <div class="review-card">
+            <div class="review-header">
+              <div class="review-avatar" style="background:#4285f4">S</div>
+              <div>
+                <div class="review-author">Sarah M.</div>
+                <div class="review-date">2 weeks ago</div>
+              </div>
+              <svg class="google-g" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+            </div>
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"Absolutely love this place! The variety is incredible — we go to Mama Makan every week. The food is authentic and the atmosphere is always buzzing. Highly recommend for families."</p>
+          </div>
+
+          <div class="review-card">
+            <div class="review-header">
+              <div class="review-avatar" style="background:#34a853">J</div>
+              <div>
+                <div class="review-author">James T.</div>
+                <div class="review-date">1 month ago</div>
+              </div>
+              <svg class="google-g" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+            </div>
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"Bristo Bakehouse makes the best flat white in Hamilton, full stop. I stop in every morning before work. The croissants are fresh and buttery every single time."</p>
+          </div>
+
+          <div class="review-card">
+            <div class="review-header">
+              <div class="review-avatar" style="background:#ea4335">P</div>
+              <div>
+                <div class="review-author">Priya K.</div>
+                <div class="review-date">3 weeks ago</div>
+              </div>
+              <svg class="google-g" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+            </div>
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"Ceylon Bites is a gem! The kottu roti is as good as anything I've had back home. So happy to have authentic Sri Lankan food in Hamilton. The staff are warm and welcoming."</p>
+          </div>
+
+          <div class="review-card">
+            <div class="review-header">
+              <div class="review-avatar" style="background:#fbbc04;color:#333">L</div>
+              <div>
+                <div class="review-author">Linda W.</div>
+                <div class="review-date">1 month ago</div>
+              </div>
+              <svg class="google-g" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+            </div>
+            <div class="review-stars">★★★★☆</div>
+            <p class="review-text">"Great food court with a really diverse range of food. We brought the whole extended family and everyone found something they loved. Kung Food's dumplings are a must-try."</p>
+          </div>
+
+          <div class="review-card">
+            <div class="review-header">
+              <div class="review-avatar" style="background:#9c27b0">R</div>
+              <div>
+                <div class="review-author">Ravi N.</div>
+                <div class="review-date">2 months ago</div>
+              </div>
+              <svg class="google-g" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+            </div>
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"Best food court in Waikato by far. The quality of food across all stalls is consistently high. Clean, well-managed and the staff everywhere are friendly. Already planning our next visit!"</p>
+          </div>
+
+        </div>
+
+        <button class="reviews-nav prev" id="revPrev">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <button class="reviews-nav next" id="revNext">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </div>
+
+      <div class="reviews-cta-row">
+        <a href="https://g.page/r/review" target="_blank" rel="noopener" class="reviews-cta-btn">
+          <svg viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+          Write a Google Review
+        </a>
+      </div>
+    </section>
+
+    <!-- ── DIRECTIONS / MAP ── -->
+    <section id="directions" class="section directions-section">
+      <div class="section-header">
+        <div class="section-eyebrow">Find Us</div>
+        <h2 class="section-title">Get Directions</h2>
+        <p class="section-sub">We're conveniently located in Hamilton CBD — easy parking nearby.</p>
+      </div>
+
+      <div class="directions-grid">
+        <div class="map-embed">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d175.28037931531627!3d-37.78703297975727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d6d17a29e25c6ed%3A0x500ef6143a2b6b0!2sHamilton%20Central%2C%20Hamilton%2C%20New%20Zealand!5e0!3m2!1sen!2snz!4v1680000000000!5m2!1sen!2snz"
+            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade" title="Google Maps — International Food Court">
+          </iframe>
+        </div>
+
+        <div class="directions-info">
+          <div class="dir-block">
+            <div class="dir-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <div class="dir-label">Address</div>
+              <div class="dir-value">Hamilton CBD<br>Hamilton, Waikato 3204<br>New Zealand</div>
+            </div>
+          </div>
+
+          <div class="dir-block">
+            <div class="dir-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div>
+              <div class="dir-label">Hours</div>
+              <div class="dir-value">Monday – Friday &nbsp; 10am – 9pm<br>Saturday – Sunday &nbsp; 9am – 9pm</div>
+            </div>
+          </div>
+
+          <div class="dir-block">
+            <div class="dir-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            </div>
+            <div>
+              <div class="dir-label">Parking</div>
+              <div class="dir-value">Free parking available on-site.<br>Street parking also nearby.</div>
+            </div>
+          </div>
+
+          <a href="https://maps.google.com/?q=Hamilton+CBD+New+Zealand" target="_blank" rel="noopener" class="get-directions-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+            Open in Google Maps
+          </a>
+        </div>
+      </div>
+    </section>
 
     <!-- Services -->
-    <div class="services-section">
+    <section class="section services-section">
       <div class="section-label">
         <h2>Also In Our Centre</h2>
         <div class="section-label-line"></div>
       </div>
       <div class="services-grid">
-
         <a class="service-card" href="#">
           <div class="service-logo">
             <img src="images/logos/western-union.jpeg" alt=""
@@ -156,7 +408,6 @@
             <div class="service-type">Money Transfer</div>
           </div>
         </a>
-
         <a class="service-card" href="#">
           <div class="service-logo">
             <img src="images/logos/dominion-travels.jpeg" alt=""
@@ -168,15 +419,83 @@
             <div class="service-type">Travel Agency</div>
           </div>
         </a>
-
       </div>
-    </div>
+    </section>
 
   </main>
 
+  <!-- ── FOOTER ── -->
   <footer class="site-footer">
-    <p><strong>International Food Court</strong> &nbsp;—&nbsp; Taste the World. Love NZ.</p>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <img src="images/logos/food-court-logo.jpeg" alt="" onerror="this.style.display='none'">
+        </div>
+        <div>
+          <div class="footer-name">International Food Court</div>
+          <div class="footer-tag">Taste the World. Love NZ.</div>
+        </div>
+      </div>
+      <div class="footer-links">
+        <a href="#restaurants">Restaurants</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#directions">Directions</a>
+      </div>
+      <div class="footer-contact">
+        <div>Hamilton CBD, New Zealand</div>
+        <div>Mon – Sun &nbsp;·&nbsp; 10am – 9pm</div>
+        <div>+64 7 000 0000</div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 International Food Court. All rights reserved.</p>
+    </div>
   </footer>
+
+  <script>
+    // ── Hero Slider ──
+    const track = document.getElementById('slidesTrack');
+    const dots  = document.querySelectorAll('.dot');
+    let current = 0;
+    const total = 3;
+    let autoTimer;
+
+    function goTo(n) {
+      current = (n + total) % total;
+      track.style.transform = `translateX(-${current * 100}%)`;
+      dots.forEach((d, i) => d.classList.toggle('active', i === current));
+    }
+
+    document.getElementById('nextBtn').addEventListener('click', () => { goTo(current + 1); resetAuto(); });
+    document.getElementById('prevBtn').addEventListener('click', () => { goTo(current - 1); resetAuto(); });
+    dots.forEach(d => d.addEventListener('click', () => { goTo(+d.dataset.index); resetAuto(); }));
+
+    function resetAuto() { clearInterval(autoTimer); autoTimer = setInterval(() => goTo(current + 1), 5500); }
+    resetAuto();
+
+    // ── Reviews Slider ──
+    const revTrack = document.getElementById('reviewsTrack');
+    let revOffset = 0;
+    const cardW = () => revTrack.querySelector('.review-card').offsetWidth + 20;
+    const maxOffset = () => revTrack.scrollWidth - revTrack.parentElement.clientWidth + 80;
+
+    document.getElementById('revNext').addEventListener('click', () => {
+      revOffset = Math.min(revOffset + cardW(), maxOffset());
+      revTrack.style.transform = `translateX(-${revOffset}px)`;
+    });
+    document.getElementById('revPrev').addEventListener('click', () => {
+      revOffset = Math.max(revOffset - cardW(), 0);
+      revTrack.style.transform = `translateX(-${revOffset}px)`;
+    });
+
+    // ── Smooth scroll for nav links ──
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+      });
+    });
+  </script>
 
 </body>
 </html>
