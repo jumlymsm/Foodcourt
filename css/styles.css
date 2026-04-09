@@ -99,80 +99,77 @@ img { display: block; max-width: 100%; }
 /* ── Restaurant Grid ──────────────────────────────── */
 .shop-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
 }
 
 .shop-card {
   position: relative;
   border-radius: 16px;
   overflow: hidden;
-  aspect-ratio: 4/3;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 28px 16px 22px;
   background: var(--card-bg);
+  border: 1px solid var(--border);
   cursor: pointer;
-  transition: transform 0.28s ease, box-shadow 0.28s ease;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+  text-align: center;
+  gap: 14px;
 }
 
 .shop-card:hover {
-  transform: translateY(-6px) scale(1.01);
-  box-shadow: 0 16px 48px rgba(0,0,0,0.55);
+  transform: translateY(-5px);
+  box-shadow: 0 14px 40px rgba(0,0,0,0.5);
+  background: #213540;
 }
 
-/* Logo fills the card */
+/* Small circular logo */
 .shop-card-logo {
-  position: absolute;
-  inset: 0;
+  width: 90px; height: 90px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: rgba(255,255,255,0.06);
   display: flex;
   align-items: center;
   justify-content: center;
+  border: 2px solid rgba(255,255,255,0.1);
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
+}
+.shop-card:hover .shop-card-logo {
+  transform: scale(1.06);
 }
 .shop-card-logo img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.4s ease;
-}
-.shop-card:hover .shop-card-logo img {
-  transform: scale(1.06);
 }
 
-/* Gradient overlay at bottom */
-.shop-card-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to bottom,
-    transparent 30%,
-    rgba(0,0,0,0.3) 60%,
-    rgba(0,0,0,0.82) 100%
-  );
-  z-index: 1;
-}
+/* No overlay needed */
+.shop-card-overlay { display: none; }
 
-/* Text at bottom */
 .shop-card-info {
-  position: absolute;
-  bottom: 0;
-  left: 0; right: 0;
-  padding: 18px 20px;
-  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
 }
 
 .shop-name {
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 700;
   color: #fff;
   letter-spacing: 0.1px;
-  line-height: 1.2;
-  text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+  line-height: 1.3;
 }
 
 .shop-cuisine {
-  font-size: 0.75rem;
-  color: rgba(255,255,255,0.65);
-  margin-top: 3px;
+  font-size: 0.72rem;
+  color: var(--muted);
   font-weight: 400;
 }
 
@@ -274,14 +271,15 @@ img { display: block; max-width: 100%; }
 
 /* ── Responsive ───────────────────────────────────── */
 @media (max-width: 960px) {
-  .shop-grid { grid-template-columns: repeat(2, 1fr); }
+  .shop-grid { grid-template-columns: repeat(4, 1fr); gap: 12px; }
   .services-grid { grid-template-columns: repeat(2, 1fr); }
   .main-content { padding: 36px 28px 56px; }
   .site-header { padding: 20px 28px; }
 }
 
-@media (max-width: 560px) {
+@media (max-width: 640px) {
   .shop-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .shop-card-logo { width: 72px; height: 72px; }
   .services-grid { grid-template-columns: 1fr; }
   .main-content { padding: 24px 16px 48px; }
   .site-header { padding: 16px 20px; }
