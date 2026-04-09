@@ -4,12 +4,549 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bristo Bakehouse – Coffee &amp; Bakery</title>
-  <link rel="stylesheet" href="../css/shop.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
   <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
     :root {
       --brand:    #5c3317;
       --brand-dk: #3e2210;
       --accent:   #c8a951;
+      --bg:       #faf6f0;
+      --bg-alt:   #f0e8db;
+      --text:     #2d1f0e;
+      --muted:    #8a6f55;
+      --border:   rgba(92, 51, 23, 0.15);
+    }
+
+    body {
+      font-family: 'Lato', 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+
+    /* ── Top Bar ── */
+    .top-bar {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 12px 40px;
+      background: rgba(250, 246, 240, 0.96);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+    }
+
+    .back-btn {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--brand);
+      padding: 7px 12px;
+      border-radius: 6px;
+      transition: background 0.2s;
+      white-space: nowrap;
+      letter-spacing: 0.3px;
+    }
+    .back-btn:hover { background: rgba(92, 51, 23, 0.08); }
+    .back-btn svg { width: 16px; height: 16px; }
+
+    .top-bar-fc-logo {
+      width: 42px; height: 42px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 2px solid var(--accent);
+      flex-shrink: 0;
+    }
+    .top-bar-fc-logo img { width: 100%; height: 100%; object-fit: cover; }
+
+    .top-bar-divider {
+      width: 1px; height: 30px;
+      background: var(--border);
+      flex-shrink: 0;
+    }
+
+    .top-bar-shop-logo {
+      height: 42px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+
+    .top-bar-shop-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--brand);
+    }
+
+    /* ── Hero ── */
+    .shop-hero {
+      min-height: 100vh;
+      background:
+        radial-gradient(ellipse at 15% 60%, rgba(200, 169, 81, 0.14) 0%, transparent 55%),
+        radial-gradient(ellipse at 85% 20%, rgba(92, 51, 23, 0.09) 0%, transparent 50%),
+        linear-gradient(155deg, #fdf9f4 0%, #f6ead8 55%, #ede0c8 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 120px 40px 90px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* subtle decorative texture rings */
+    .shop-hero::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 700px; height: 700px;
+      border-radius: 50%;
+      border: 1px solid rgba(200, 169, 81, 0.12);
+      pointer-events: none;
+    }
+    .shop-hero::after {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 500px; height: 500px;
+      border-radius: 50%;
+      border: 1px solid rgba(200, 169, 81, 0.09);
+      pointer-events: none;
+    }
+
+    .hero-logo {
+      width: 140px; height: 140px;
+      object-fit: contain;
+      border-radius: 50%;
+      background: #fff;
+      padding: 14px;
+      box-shadow: 0 10px 48px rgba(92, 51, 23, 0.2);
+      margin-bottom: 32px;
+      position: relative;
+    }
+
+    .hero-eyebrow {
+      font-size: 0.72rem;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 700;
+      margin-bottom: 14px;
+      position: relative;
+    }
+
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(3rem, 7vw, 5.5rem);
+      font-weight: 700;
+      color: var(--brand-dk);
+      line-height: 1.08;
+      margin-bottom: 22px;
+      position: relative;
+    }
+
+    .hero-tagline {
+      font-size: 1rem;
+      color: var(--muted);
+      font-weight: 300;
+      letter-spacing: 0.4px;
+      max-width: 400px;
+      line-height: 1.8;
+      margin-bottom: 44px;
+      position: relative;
+    }
+
+    .hero-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--brand);
+      color: #fff;
+      padding: 15px 36px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      transition: background 0.2s, transform 0.18s;
+      position: relative;
+    }
+    .hero-cta:hover { background: var(--brand-dk); transform: translateY(-2px); }
+
+    .hero-scroll {
+      position: absolute;
+      bottom: 34px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      color: var(--muted);
+      font-size: 0.68rem;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      animation: scrollBounce 2.4s ease-in-out infinite;
+    }
+    .hero-scroll svg { width: 18px; height: 18px; opacity: 0.45; }
+
+    @keyframes scrollBounce {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50%       { transform: translateX(-50%) translateY(7px); }
+    }
+
+    /* ── Intro Strip ── */
+    .intro-strip {
+      background: var(--brand);
+      padding: 44px 40px;
+      text-align: center;
+    }
+    .intro-strip p {
+      max-width: 660px;
+      margin: 0 auto;
+      font-size: 1rem;
+      line-height: 1.9;
+      color: rgba(255,255,255,0.82);
+      font-weight: 300;
+    }
+    .intro-strip em {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-weight: 400;
+      color: var(--accent);
+    }
+
+    /* ── Tab Nav ── */
+    .tab-nav {
+      display: flex;
+      justify-content: center;
+      background: var(--bg-alt);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 67px;
+      z-index: 99;
+    }
+
+    .tab-btn {
+      padding: 18px 48px;
+      font-family: 'Lato', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--muted);
+      border-bottom: 2px solid transparent;
+      margin-bottom: -1px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .tab-btn:hover { color: var(--brand); }
+    .tab-btn.active {
+      color: var(--brand);
+      border-bottom-color: var(--brand);
+    }
+
+    /* ── Tab Panels ── */
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+
+    .shop-content {
+      max-width: 860px;
+      margin: 0 auto;
+      width: 100%;
+      padding: 64px 40px 80px;
+    }
+
+    /* ── Menu ── */
+    .menu-category { margin-bottom: 60px; }
+
+    .category-header {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 6px;
+    }
+
+    .category-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.55rem;
+      font-weight: 600;
+      color: var(--brand);
+      white-space: nowrap;
+    }
+
+    .category-line {
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    .category-tag {
+      font-size: 0.68rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .menu-items { display: block; }
+
+    .menu-item {
+      display: flex;
+      align-items: baseline;
+      gap: 16px;
+      padding: 17px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .menu-item:first-child { border-top: 1px solid var(--border); }
+
+    .item-info { flex: 1; min-width: 0; }
+
+    .item-name {
+      font-size: 0.97rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 3px;
+    }
+
+    .item-desc {
+      font-size: 0.84rem;
+      color: var(--muted);
+      font-weight: 300;
+      line-height: 1.55;
+    }
+
+    .item-dots {
+      flex: 1;
+      max-width: 100px;
+      border-bottom: 1px dotted rgba(92,51,23,0.22);
+      align-self: flex-end;
+      margin-bottom: 5px;
+    }
+
+    .item-price {
+      font-family: 'Playfair Display', serif;
+      font-size: 0.97rem;
+      font-weight: 600;
+      color: var(--brand);
+      white-space: nowrap;
+    }
+
+    /* ── Gallery ── */
+    .section-intro {
+      text-align: center;
+      margin-bottom: 44px;
+    }
+    .section-intro h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.9rem;
+      color: var(--brand);
+      margin-bottom: 10px;
+    }
+    .section-intro p {
+      color: var(--muted);
+      font-size: 0.88rem;
+      font-weight: 300;
+      line-height: 1.7;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+
+    .gallery-item {
+      border-radius: 3px;
+      overflow: hidden;
+      aspect-ratio: 4/3;
+      background: #e4d9cc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .gallery-item:first-child {
+      grid-column: span 2;
+      aspect-ratio: 16/9;
+    }
+
+    .gallery-item img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform 0.45s ease;
+    }
+    .gallery-item:hover img { transform: scale(1.04); }
+
+    .gallery-placeholder {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 9px;
+      color: #b0a090;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+    .gallery-placeholder svg { width: 30px; height: 30px; opacity: 0.3; }
+
+    /* ── Recipes ── */
+    .recipe-card {
+      margin-bottom: 64px;
+      padding-bottom: 64px;
+      border-bottom: 1px solid var(--border);
+    }
+    .recipe-card:last-child { border-bottom: none; }
+
+    .recipe-eyebrow {
+      font-size: 0.68rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .recipe-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.9rem;
+      font-weight: 600;
+      color: var(--brand-dk);
+      margin-bottom: 14px;
+      line-height: 1.15;
+    }
+
+    .recipe-meta {
+      display: flex;
+      gap: 28px;
+      margin-bottom: 28px;
+      font-size: 0.8rem;
+      color: var(--muted);
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+    .recipe-meta span {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+    .recipe-meta span::before {
+      content: '';
+      width: 4px; height: 4px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .recipe-rule {
+      width: 40px; height: 2px;
+      background: var(--accent);
+      margin-bottom: 32px;
+    }
+
+    .recipe-body {
+      display: grid;
+      grid-template-columns: 210px 1fr;
+      gap: 52px;
+    }
+
+    .recipe-section-title {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--brand);
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .ingredients-list {
+      list-style: none;
+      font-size: 0.875rem;
+      line-height: 2;
+      color: var(--text);
+      font-weight: 300;
+    }
+    .ingredients-list li { display: flex; align-items: flex-start; gap: 8px; }
+    .ingredients-list li::before {
+      content: '—';
+      color: var(--accent);
+      flex-shrink: 0;
+      font-weight: 400;
+    }
+
+    .steps-list {
+      list-style: none;
+      counter-reset: step;
+      font-size: 0.9rem;
+    }
+    .steps-list li {
+      counter-increment: step;
+      display: flex;
+      gap: 16px;
+      margin-bottom: 20px;
+      line-height: 1.7;
+      font-weight: 300;
+      align-items: flex-start;
+    }
+    .steps-list li::before {
+      content: counter(step, decimal-leading-zero);
+      font-family: 'Playfair Display', serif;
+      font-size: 0.95rem;
+      color: var(--accent);
+      font-weight: 600;
+      flex-shrink: 0;
+      width: 26px;
+      line-height: 1.7;
+    }
+
+    /* ── Footer ── */
+    .site-footer {
+      background: var(--brand-dk);
+      color: rgba(255,255,255,0.45);
+      text-align: center;
+      padding: 26px 20px;
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+    }
+    .site-footer strong { color: var(--accent); font-weight: 400; }
+
+    /* ── Responsive ── */
+    @media (max-width: 768px) {
+      .top-bar { padding: 10px 20px; }
+      .shop-hero { padding: 100px 24px 70px; }
+      .hero-title { font-size: 2.8rem; }
+      .intro-strip { padding: 36px 24px; }
+      .tab-btn { padding: 16px 24px; font-size: 0.74rem; letter-spacing: 1.5px; }
+      .shop-content { padding: 44px 24px 60px; }
+      .recipe-body { grid-template-columns: 1fr; gap: 32px; }
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+      .gallery-item:first-child { grid-column: span 2; }
+    }
+
+    @media (max-width: 480px) {
+      .gallery-grid { grid-template-columns: 1fr; }
+      .gallery-item:first-child { grid-column: span 1; }
+      .top-bar-shop-name { display: none; }
+      .tab-nav { overflow-x: auto; justify-content: flex-start; }
+      .hero-title { font-size: 2.4rem; }
+      .item-dots { display: none; }
     }
   </style>
 </head>
@@ -28,10 +565,21 @@
 
   <section class="shop-hero">
     <img class="hero-logo" src="../images/logos/bristo-bakehouse.png" alt="Bristo Bakehouse" />
-    <p class="hero-tagline">Artisan coffee &amp; fresh-baked goodness every morning</p>
+    <p class="hero-eyebrow">International Food Court</p>
+    <h1 class="hero-title">Bristo<br>Bakehouse</h1>
+    <p class="hero-tagline">Artisan coffee &amp; fresh-baked goodness,<br>crafted with love every morning</p>
+    <a class="hero-cta" href="#content-start">View Our Menu</a>
+    <div class="hero-scroll">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+      Scroll
+    </div>
   </section>
 
-  <nav class="tab-nav">
+  <div class="intro-strip">
+    <p>We bake everything <em>from scratch</em>, every morning — using local New Zealand ingredients and old-world techniques. Pull up a chair, order your favourite coffee, and let the smell of <em>fresh croissants</em> do the rest.</p>
+  </div>
+
+  <nav class="tab-nav" id="content-start">
     <button class="tab-btn active" data-tab="menu">Menu</button>
     <button class="tab-btn" data-tab="gallery">Gallery</button>
     <button class="tab-btn" data-tab="recipes">Recipes</button>
@@ -43,97 +591,113 @@
     <div class="tab-panel active" id="menu">
 
       <div class="menu-category">
-        <h2 class="category-title">Coffee</h2>
+        <div class="category-header">
+          <h2 class="category-title">Coffee</h2>
+          <div class="category-line"></div>
+          <span class="category-tag">Espresso Bar</span>
+        </div>
         <div class="menu-items">
           <div class="menu-item">
             <div class="item-info"><div class="item-name">Flat White</div><div class="item-desc">Double espresso with silky steamed milk — the Kiwi classic</div></div>
-            <span class="item-price">$5</span>
+            <div class="item-dots"></div><span class="item-price">$5.00</span>
           </div>
           <div class="menu-item">
-            <div class="item-info"><div class="item-name">Long Black</div><div class="item-desc">Double espresso over hot water, bold & clean</div></div>
-            <span class="item-price">$4.50</span>
+            <div class="item-info"><div class="item-name">Long Black</div><div class="item-desc">Double espresso over hot water, bold &amp; clean</div></div>
+            <div class="item-dots"></div><span class="item-price">$4.50</span>
           </div>
           <div class="menu-item">
-            <div class="item-info"><div class="item-name">Cappuccino</div><div class="item-desc">Espresso, steamed milk & thick froth with a dusting of cocoa</div></div>
-            <span class="item-price">$5</span>
+            <div class="item-info"><div class="item-name">Cappuccino</div><div class="item-desc">Espresso, steamed milk &amp; thick froth with a dusting of cocoa</div></div>
+            <div class="item-dots"></div><span class="item-price">$5.00</span>
           </div>
           <div class="menu-item">
             <div class="item-info"><div class="item-name">Latte</div><div class="item-desc">Smooth espresso with velvety steamed milk</div></div>
-            <span class="item-price">$5.50</span>
+            <div class="item-dots"></div><span class="item-price">$5.50</span>
           </div>
           <div class="menu-item">
-            <div class="item-info"><div class="item-name">Mocha</div><div class="item-desc">Espresso, chocolate sauce & steamed milk</div></div>
-            <span class="item-price">$5.50</span>
+            <div class="item-info"><div class="item-name">Mocha</div><div class="item-desc">Espresso, chocolate sauce &amp; steamed milk</div></div>
+            <div class="item-dots"></div><span class="item-price">$5.50</span>
           </div>
           <div class="menu-item">
             <div class="item-info"><div class="item-name">Cold Brew</div><div class="item-desc">Slow-steeped 18-hour cold brew, served over ice</div></div>
-            <span class="item-price">$6</span>
+            <div class="item-dots"></div><span class="item-price">$6.00</span>
           </div>
         </div>
       </div>
 
       <div class="menu-category">
-        <h2 class="category-title">Pastries & Baked Goods</h2>
+        <div class="category-header">
+          <h2 class="category-title">Pastries &amp; Baked Goods</h2>
+          <div class="category-line"></div>
+          <span class="category-tag">Fresh Daily</span>
+        </div>
         <div class="menu-items">
           <div class="menu-item">
             <div class="item-info"><div class="item-name">Butter Croissant</div><div class="item-desc">Flaky, golden French-style croissant baked fresh daily</div></div>
-            <span class="item-price">$4.50</span>
+            <div class="item-dots"></div><span class="item-price">$4.50</span>
           </div>
           <div class="menu-item">
             <div class="item-info"><div class="item-name">Almond Croissant</div><div class="item-desc">Croissant filled with frangipane, topped with flaked almonds</div></div>
-            <span class="item-price">$5.50</span>
+            <div class="item-dots"></div><span class="item-price">$5.50</span>
           </div>
           <div class="menu-item">
             <div class="item-info"><div class="item-name">Blueberry Muffin</div><div class="item-desc">Moist muffin bursting with fresh blueberries</div></div>
-            <span class="item-price">$4</span>
+            <div class="item-dots"></div><span class="item-price">$4.00</span>
           </div>
           <div class="menu-item">
-            <div class="item-info"><div class="item-name">Cheese & Vegemite Scroll</div><div class="item-desc">Soft dough scrolls with cheddar & Vegemite filling</div></div>
-            <span class="item-price">$4.50</span>
+            <div class="item-info"><div class="item-name">Cheese &amp; Vegemite Scroll</div><div class="item-desc">Soft dough scrolls with cheddar &amp; Vegemite filling</div></div>
+            <div class="item-dots"></div><span class="item-price">$4.50</span>
           </div>
         </div>
       </div>
 
       <div class="menu-category">
-        <h2 class="category-title">Sandwiches & Toasties</h2>
+        <div class="category-header">
+          <h2 class="category-title">Sandwiches &amp; Toasties</h2>
+          <div class="category-line"></div>
+          <span class="category-tag">Made to Order</span>
+        </div>
         <div class="menu-items">
           <div class="menu-item">
-            <div class="item-info"><div class="item-name">BLT</div><div class="item-desc">Bacon, lettuce, tomato & aioli on sourdough</div></div>
-            <span class="item-price">$11</span>
+            <div class="item-info"><div class="item-name">BLT</div><div class="item-desc">Bacon, lettuce, tomato &amp; aioli on sourdough</div></div>
+            <div class="item-dots"></div><span class="item-price">$11.00</span>
           </div>
           <div class="menu-item">
-            <div class="item-info"><div class="item-name">Chicken Club</div><div class="item-desc">Grilled chicken, avocado, bacon, lettuce & mayo on Turkish</div></div>
-            <span class="item-price">$13</span>
+            <div class="item-info"><div class="item-name">Chicken Club</div><div class="item-desc">Grilled chicken, avocado, bacon, lettuce &amp; mayo on Turkish</div></div>
+            <div class="item-dots"></div><span class="item-price">$13.00</span>
           </div>
           <div class="menu-item">
-            <div class="item-info"><div class="item-name">Egg & Cheese Toastie</div><div class="item-desc">Free-range egg, cheddar & relish in toasted sourdough</div></div>
-            <span class="item-price">$9</span>
+            <div class="item-info"><div class="item-name">Egg &amp; Cheese Toastie</div><div class="item-desc">Free-range egg, cheddar &amp; relish in toasted sourdough</div></div>
+            <div class="item-dots"></div><span class="item-price">$9.00</span>
           </div>
           <div class="menu-item">
-            <div class="item-info"><div class="item-name">Falafel Wrap</div><div class="item-desc">Crispy falafel, hummus, tabbouleh & tahini in a flatbread</div></div>
-            <span class="item-price">$12</span>
+            <div class="item-info"><div class="item-name">Falafel Wrap</div><div class="item-desc">Crispy falafel, hummus, tabbouleh &amp; tahini in a flatbread</div></div>
+            <div class="item-dots"></div><span class="item-price">$12.00</span>
           </div>
         </div>
       </div>
 
       <div class="menu-category">
-        <h2 class="category-title">Cakes & Slices</h2>
+        <div class="category-header">
+          <h2 class="category-title">Cakes &amp; Slices</h2>
+          <div class="category-line"></div>
+          <span class="category-tag">Baked In-House</span>
+        </div>
         <div class="menu-items">
           <div class="menu-item">
             <div class="item-info"><div class="item-name">Carrot Cake</div><div class="item-desc">Spiced carrot cake with cream cheese frosting</div></div>
-            <span class="item-price">$6</span>
+            <div class="item-dots"></div><span class="item-price">$6.00</span>
           </div>
           <div class="menu-item">
             <div class="item-info"><div class="item-name">Chocolate Brownie</div><div class="item-desc">Fudgy dark chocolate brownie with sea salt</div></div>
-            <span class="item-price">$5</span>
+            <div class="item-dots"></div><span class="item-price">$5.00</span>
           </div>
           <div class="menu-item">
             <div class="item-info"><div class="item-name">Baked Cheesecake</div><div class="item-desc">Classic New York style cheesecake with berry compote</div></div>
-            <span class="item-price">$7</span>
+            <div class="item-dots"></div><span class="item-price">$7.00</span>
           </div>
           <div class="menu-item">
-            <div class="item-info"><div class="item-name">Anzac Biscuit</div><div class="item-desc">Traditional oat & golden syrup biscuit, crispy & chewy</div></div>
-            <span class="item-price">$2.50</span>
+            <div class="item-info"><div class="item-name">Anzac Biscuit</div><div class="item-desc">Traditional oat &amp; golden syrup biscuit, crispy &amp; chewy</div></div>
+            <div class="item-dots"></div><span class="item-price">$2.50</span>
           </div>
         </div>
       </div>
@@ -141,6 +705,10 @@
 
     <!-- GALLERY -->
     <div class="tab-panel" id="gallery">
+      <div class="section-intro">
+        <h2>From Our Kitchen</h2>
+        <p>A glimpse into the warmth and craft behind every cup and bake</p>
+      </div>
       <div class="gallery-grid">
         <div class="gallery-item"><div class="gallery-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>Flat White</div></div>
         <div class="gallery-item"><div class="gallery-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>Butter Croissant</div></div>
@@ -154,9 +722,20 @@
     <!-- RECIPES -->
     <div class="tab-panel" id="recipes">
 
+      <div class="section-intro">
+        <h2>From Our Kitchen, To Yours</h2>
+        <p>We believe great baking should be shared. Try these recipes at home and bring a little Bristo magic into your kitchen.</p>
+      </div>
+
       <div class="recipe-card">
+        <div class="recipe-eyebrow">Pastry</div>
         <div class="recipe-title">Classic Butter Croissants</div>
-        <div class="recipe-meta"><span>Makes: 8</span><span>Prep: 3 hrs</span><span>Bake: 20 min</span></div>
+        <div class="recipe-meta">
+          <span>Makes 8</span>
+          <span>3 hrs prep</span>
+          <span>20 min bake</span>
+        </div>
+        <div class="recipe-rule"></div>
         <div class="recipe-body">
           <div>
             <div class="recipe-section-title">Ingredients</div>
@@ -186,8 +765,14 @@
       </div>
 
       <div class="recipe-card">
+        <div class="recipe-eyebrow">Baked Goods</div>
         <div class="recipe-title">Fudgy Chocolate Brownies</div>
-        <div class="recipe-meta"><span>Makes: 16 squares</span><span>Prep: 15 min</span><span>Bake: 25 min</span></div>
+        <div class="recipe-meta">
+          <span>Makes 16 squares</span>
+          <span>15 min prep</span>
+          <span>25 min bake</span>
+        </div>
+        <div class="recipe-rule"></div>
         <div class="recipe-body">
           <div>
             <div class="recipe-section-title">Ingredients</div>
@@ -221,7 +806,7 @@
   </div>
 
   <footer class="site-footer">
-    <p>International Food Court &mdash; Taste the World. Love NZ.</p>
+    <p><strong>International Food Court</strong> &mdash; Taste the World. Love NZ.</p>
   </footer>
 
   <script src="../js/shop.js"></script>
