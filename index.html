@@ -8,89 +8,144 @@
 </head>
 <body>
 
-  <!-- Header -->
   <header class="site-header">
-    <div class="header-logo">
-      <img src="images/logos/food-court-logo.png" alt="International Food Court" />
+    <div class="header-inner">
+      <div class="header-logo">
+        <img src="images/logos/food-court-logo.png" alt="International Food Court" />
+      </div>
+      <div class="header-text">
+        <p class="header-eyebrow">Hamilton, New Zealand</p>
+        <h1 class="header-title">International Food Court</h1>
+        <p class="header-tagline">Taste the World. Love NZ.</p>
+      </div>
     </div>
   </header>
 
-  <!-- Restaurant Grid -->
   <main class="main-content">
+
+    <!-- Restaurants -->
+    <div class="section-label">
+      <h2>Our Restaurants</h2>
+      <div class="section-label-line"></div>
+    </div>
+
     <div class="shop-grid">
 
-      <!-- 1. Bristo Bakehouse -->
       <a class="shop-card" href="shops/bristo-bakehouse.html">
-        <img src="images/logos/bristo-bakehouse.png" alt="Bristo Bakehouse" />
+        <div class="shop-card-logo">
+          <img src="images/logos/bristo-bakehouse.png" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <span class="logo-fallback" style="display:none">B</span>
+        </div>
         <span class="shop-name">Bristo Bakehouse</span>
+        <span class="shop-cuisine">Coffee &amp; Bakery</span>
       </a>
 
-      <!-- 2. Mama Makan -->
       <a class="shop-card" href="shops/mama-makan.html">
-        <img src="images/logos/mama-makan.png" alt="Mama Makan" />
+        <div class="shop-card-logo">
+          <img src="images/logos/mama-makan.png" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <span class="logo-fallback" style="display:none">M</span>
+        </div>
         <span class="shop-name">Mama Makan</span>
+        <span class="shop-cuisine">Malaysian &amp; Indonesian</span>
       </a>
 
-      <!-- 3. Kung Food -->
       <a class="shop-card" href="shops/kung-food.html">
-        <img src="images/logos/kung-food.png" alt="Kung Food" />
+        <div class="shop-card-logo">
+          <img src="images/logos/kung-food.png" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <span class="logo-fallback" style="display:none">K</span>
+        </div>
         <span class="shop-name">Kung Food</span>
+        <span class="shop-cuisine">Chinese &amp; Asian Fusion</span>
       </a>
 
-      <!-- 4. Ceylon Bites -->
       <a class="shop-card" href="shops/ceylon-bites.html">
-        <img src="images/logos/ceylon-bites.png" alt="Ceylon Bites" />
+        <div class="shop-card-logo">
+          <img src="images/logos/ceylon-bites.png" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <span class="logo-fallback" style="display:none">C</span>
+        </div>
         <span class="shop-name">Ceylon Bites</span>
+        <span class="shop-cuisine">Sri Lankan</span>
       </a>
 
-      <!-- 5. Try India -->
-      <a class="shop-card" href="#">
-        <img src="images/logos/try-india.png" alt="Try India" />
+      <a class="shop-card coming-soon" href="#">
+        <span class="coming-tag">Coming Soon</span>
+        <div class="shop-card-logo">
+          <img src="images/logos/try-india.png" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <span class="logo-fallback" style="display:none">T</span>
+        </div>
         <span class="shop-name">Try India</span>
+        <span class="shop-cuisine">Indian</span>
       </a>
 
-      <!-- 6. Crispy Corner -->
-      <a class="shop-card" href="#">
-        <img src="images/logos/crispy-corner.png" alt="Crispy Corner" />
+      <a class="shop-card coming-soon" href="#">
+        <span class="coming-tag">Coming Soon</span>
+        <div class="shop-card-logo">
+          <img src="images/logos/crispy-corner.png" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <span class="logo-fallback" style="display:none">C</span>
+        </div>
         <span class="shop-name">Crispy Corner</span>
+        <span class="shop-cuisine">Fried Chicken &amp; Burgers</span>
       </a>
 
-      <!-- 7. Pizzaria -->
-      <a class="shop-card" href="#">
-        <img src="images/logos/pizzaria.png" alt="Pizzaria" />
+      <a class="shop-card coming-soon" href="#">
+        <span class="coming-tag">Coming Soon</span>
+        <div class="shop-card-logo">
+          <img src="images/logos/pizzaria.png" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <span class="logo-fallback" style="display:none">P</span>
+        </div>
         <span class="shop-name">Pizzaria</span>
+        <span class="shop-cuisine">Pizza &amp; Italian</span>
       </a>
 
-      <!-- 8. Fizz & Folly -->
-      <a class="shop-card" href="#">
-        <img src="images/logos/fizz-folly.png" alt="Fizz &amp; Folly" />
+      <a class="shop-card coming-soon" href="#">
+        <span class="coming-tag">Coming Soon</span>
+        <div class="shop-card-logo">
+          <img src="images/logos/fizz-folly.png" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <span class="logo-fallback" style="display:none">F</span>
+        </div>
         <span class="shop-name">Fizz &amp; Folly</span>
+        <span class="shop-cuisine">Drinks &amp; Desserts</span>
       </a>
 
     </div>
 
-    <!-- Other Services -->
+    <!-- Services -->
     <div class="services-section">
-      <h2 class="services-title">Also In Our Centre</h2>
+      <div class="section-label" style="margin-bottom:24px">
+        <h2>Also In Our Centre</h2>
+        <div class="section-label-line"></div>
+      </div>
       <div class="services-grid">
 
         <a class="service-card" href="#">
-          <img src="images/logos/western-union.png" alt="Western Union" />
-          <span class="shop-name">Western Union</span>
+          <div class="service-logo">
+            <img src="images/logos/western-union.png" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <span class="logo-fallback" style="display:none">W</span>
+          </div>
+          <div class="service-info">
+            <div class="service-name">Western Union</div>
+            <div class="service-type">Money Transfer</div>
+          </div>
         </a>
 
         <a class="service-card" href="#">
-          <img src="images/logos/dominion-travels.png" alt="Dominion Travels" />
-          <span class="shop-name">Dominion Travels</span>
+          <div class="service-logo">
+            <img src="images/logos/dominion-travels.png" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <span class="logo-fallback" style="display:none">D</span>
+          </div>
+          <div class="service-info">
+            <div class="service-name">Dominion Travels</div>
+            <div class="service-type">Travel Agency</div>
+          </div>
         </a>
 
       </div>
     </div>
+
   </main>
 
-  <!-- Footer -->
   <footer class="site-footer">
-    <p>International Food Court &mdash; Taste the World. Love NZ.</p>
+    <p><strong>International Food Court</strong> &mdash; Taste the World. Love NZ.</p>
   </footer>
 
 </body>
