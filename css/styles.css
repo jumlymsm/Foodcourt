@@ -56,7 +56,13 @@ img { display: block; max-width: 100%; }
   font-weight: 700;
   color: #fff;
   letter-spacing: -0.3px;
-  line-height: 1.15;
+  line-height: 1.2;
+}
+.title-small {
+  font-size: 0.96rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  color: rgba(255,255,255,0.75);
 }
 .header-tagline {
   font-size: 0.7rem;
