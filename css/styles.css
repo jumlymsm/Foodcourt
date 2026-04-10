@@ -43,7 +43,7 @@ img { display: block; max-width: 100%; }
 }
 
 .header-logo {
-  width: 608px; height: 453px;
+  width: 90px; height: 67px;
   border-radius: 8px;
   overflow: hidden;
   border: 2px solid var(--accent);
