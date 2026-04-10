@@ -441,7 +441,7 @@ img { display: block; max-width: 100%; }
 
 .reviews-heading {
   font-family: 'Inter', sans-serif;
-  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-size: clamp(1.55rem, 2.7vw, 2.15rem);
   font-weight: 800;
   color: #111;
   margin-bottom: 8px;
