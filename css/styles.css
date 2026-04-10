@@ -748,8 +748,8 @@ img { display: block; max-width: 100%; }
 .services-section { padding-bottom: 80px; }
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
 }
 .service-card {
   display: flex;
@@ -768,8 +768,8 @@ img { display: block; max-width: 100%; }
   box-shadow: 0 8px 28px rgba(0,0,0,0.3);
 }
 .service-logo {
-  width: 46px; height: 46px;
-  border-radius: 10px;
+  width: 80px; height: 80px;
+  border-radius: 12px;
   overflow: hidden;
   background: rgba(255,255,255,0.06);
   display: flex; align-items: center; justify-content: center;
