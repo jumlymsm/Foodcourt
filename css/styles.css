@@ -29,7 +29,7 @@ img { display: block; max-width: 100%; }
 
 /* ── Sticky Header ─────────────────────────────────── */
 .site-header {
-  padding: 16px 48px;
+  padding: 14px 48px;
   display: flex;
   align-items: center;
   gap: 16px;
@@ -52,10 +52,11 @@ img { display: block; max-width: 100%; }
 .header-logo img { width: 100%; height: 100%; object-fit: cover; }
 
 .header-title {
-  font-size: 1.05rem;
+  font-size: 1.6rem;
   font-weight: 700;
   color: #fff;
-  letter-spacing: -0.2px;
+  letter-spacing: -0.3px;
+  line-height: 1.15;
 }
 .header-tagline {
   font-size: 0.7rem;
